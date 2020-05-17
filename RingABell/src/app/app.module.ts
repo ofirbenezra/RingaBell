@@ -22,6 +22,7 @@ import { SearchComponent } from './search/search.component';
 import { AddReviewDialogComponent } from './add-review-dialog/add-review-dialog.component';
 import { HomeComponent } from './home/home.component';
 import { AddReviewFirstStepComponent } from './add-review/add-review-first-step/add-review-first-step.component';
+import { AddReviewSecondStepComponent } from './add-review-second-step/add-review-second-step.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { AddReviewFirstStepComponent } from './add-review/add-review-first-step/
     SearchComponent,
     AddReviewDialogComponent,
     HomeComponent,
-    AddReviewFirstStepComponent
+    AddReviewFirstStepComponent,
+    AddReviewSecondStepComponent
   ],
   imports: [
     BrowserModule,

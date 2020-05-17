@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Review } from 'src/app/models/review.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-review-first-step',
@@ -10,7 +11,7 @@ export class AddReviewFirstStepComponent implements OnInit {
   
   data: Review;
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.data = {
@@ -30,4 +31,7 @@ export class AddReviewFirstStepComponent implements OnInit {
     }
   }
 
+  gotoNextStep() {
+    this.router.navigate(['add-review2']);
+  }
 }
