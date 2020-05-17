@@ -1,0 +1,41 @@
+@import "../../styles/vars.scss";
+
+.first-step {
+    display: grid;
+    grid-template-rows: 20px 200px 40px auto;
+    margin: 0 auto;
+    width: 375px;
+
+    .header {
+        color: #fff;
+        font-family: Merriweather;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+::ng-deep p-checkbox {
+    .ui-chkbox .ui-chkbox-box {
+        width: 22px;
+        height: 22px;
+        border: 1px solid #58bbc1;
+        background-color: $APP_BACKGROUND;
+        &:not(.ui-state-disabled):hover {
+            border: 1px solid #58bbc1;
+        }
+    }
+    .ui-chkbox-label {
+        color: #fff;
+    }
+}
+
+::ng-deep p-button {
+    .ui-button {
+        width: 32px;
+        height: 32px;
+        background: #58bbc1;
+        border-radius: 4px;
+    }  
+  }

@@ -1,0 +1,56 @@
+<div class="first-step">
+    <div class="header">
+        Personal information of the abuser
+    </div>
+    <div>
+        <div class="ui-g-12">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="24" pInputText>
+                <label for="float-input">First Name</label>
+            </span>
+        </div>
+        <div class="ui-g-12">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="24" pInputText>
+                <label for="float-input">First Name</label>
+            </span>
+        </div>
+        <div class="ui-g-12">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="24" pInputText>
+                <label for="float-input">First Name</label>
+            </span>
+        </div>
+        <div class="ui-g-12">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="24" pInputText>
+                <label for="float-input">First Name</label>
+            </span>
+        </div>
+    </div>
+    <div class="header">Physical characteristics of the abuser</div>
+    <div>
+        <div class="ui-g-12">
+            <p-checkbox name="group1" label="Destroys your property or things that you care about."
+                [(ngModel)]="data.characteristics.destroysProperty" inputId="ny"></p-checkbox>
+        </div>
+        <div class="ui-g-12">
+            <p-checkbox name="group1" label="Criticize you for little things?"
+                [(ngModel)]="data.characteristics.criticizem" inputId="ny"></p-checkbox>
+        </div>
+        <div class="ui-g-12">
+            <p-checkbox name="group1" label="Forces you to have sex against your will."
+                [(ngModel)]="data.characteristics.forcesToHaveSex" inputId="ny"></p-checkbox>
+        </div>
+        <div class="ui-g-12">
+            <p-checkbox name="group1"
+                label="Threatens to hurt you or the children or pets, or does cause hurt (by hitting, punching, slapping, kicking, or biting)."
+                [(ngModel)]="data.characteristics.threatens" inputId="ny"></p-checkbox>
+        </div>
+        <div class="ui-g-12">
+            <p-checkbox name="group1" label="Constantly accuses you of being unfaithful."
+                [(ngModel)]="data.characteristics.accusesOfBeingUnfaithful" inputId="ny"></p-checkbox>
+        </div>
+    </div>
+    <p-button><i class="pi pi-arrow-right" style="padding-top: 8px;"></i></p-button>
+</div>>

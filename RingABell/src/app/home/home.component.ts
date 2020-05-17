@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Review } from '../models/review.model';
 // import { MatDialog } from '@angular/material/dialog';
 import { AddReviewDialogComponent } from '../add-review-dialog/add-review-dialog.component';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,36 +12,32 @@ import { AddReviewDialogComponent } from '../add-review-dialog/add-review-dialog
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  ref: DynamicDialogRef;
+
+  constructor(public dialogService: DialogService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   addReview() {
-    // const review: Review = {
-    //   age: 25,
-    //   firstName: '',
-    //   lastName: '',
-    //   hebFirstName: '',
-    //   hebLastName: '',
-    //   characteristics: {
-    //     shouts: false,
-    //     accusesOfBeingUnfaithful: false,
-    //     criticizem: false,
-    //     destroysProperty: false,
-    //     forcesToHaveSex: false,
-    //     threatens: false
-    //   }
-    // }
-    // const dialogRef = this.dialog.open(AddReviewDialogComponent, {
-    //   // width: '250px',
-    //   data: review
+    this.router.navigate(['add-review']);
+    // this.ref = this.dialogService.open(AddReviewDialogComponent, {
+    //   header: 'Add Review',
+    //   footer: 'Add',
+    //   closable: true,
+    //   width: '50%'
     // });
 
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-    //   // this.animal = result;
+
+    // this.ref.onClose.subscribe(() => {
+    //   // if (car) {
+    //     // this.messageService.add({severity:'info', summary: 'Car Selected', detail:'Vin:' + car.vin});
+    //   // }
     // });
+  }
+
+  searchReview() {
+    this.router.navigate(['search']);
   }
 
 }

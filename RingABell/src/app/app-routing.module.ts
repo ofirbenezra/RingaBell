@@ -5,6 +5,7 @@ import { SearchComponent } from './search/search.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AddReviewDialogComponent } from './add-review-dialog/add-review-dialog.component';
+import { AddReviewFirstStepComponent } from './add-review/add-review-first-step/add-review-first-step.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'add-review',
+    component: AddReviewFirstStepComponent
   },
   {
     path: 'login',

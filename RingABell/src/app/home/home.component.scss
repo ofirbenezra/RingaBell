@@ -1,22 +1,51 @@
+@import "../styles/vars.scss";
 .main-app {
-    display: grid;
-    grid-template-rows: 100px auto;
-    width: 500px;    
-    margin: 0 auto;
-    padding: 5px 15px;
+  display: grid;
+  grid-template-rows: 100px auto;
+  width: 500px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  color: #ffffff;
+
+  .app-description {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .button-bar {
+    display: flex;
+    padding-top: 32px;
+  }
+}
+
+.spacer {
+  flex: 1;
+}
+
+::ng-deep p-button {
+  .ui-button {
+    width: 176px;
+    height: 32px;
+    background: #58bbc1;
+    border-radius: 4px;
+  }  
 }
 
 .selection-radio-group {
-    // display: flex;
-    // flex-direction: column;
-    margin: 15px 0;
-    justify-content: center;
-  }
+  // display: flex;
+  // flex-direction: column;
+  margin: 15px 0;
+  justify-content: center;
+}
 
-  .selection-link {
-    margin: 5px;
-  }
+.selection-link {
+  margin: 5px;
+  display: block;
+}
 
-  .selection-panel {
-    // display: inline-grid;
-  }
+.selection-panel {
+  // display: inline-grid;
+}
