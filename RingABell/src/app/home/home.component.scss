@@ -1,0 +1,22 @@
+.main-app {
+    display: grid;
+    grid-template-rows: 100px auto;
+    width: 500px;    
+    margin: 0 auto;
+    padding: 5px 15px;
+}
+
+.selection-radio-group {
+    // display: flex;
+    // flex-direction: column;
+    margin: 15px 0;
+    justify-content: center;
+  }
+
+  .selection-link {
+    margin: 5px;
+  }
+
+  .selection-panel {
+    // display: inline-grid;
+  }

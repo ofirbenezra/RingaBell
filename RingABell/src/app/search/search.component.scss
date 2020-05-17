@@ -1,0 +1,16 @@
+.search-container {
+    width: 500px;
+    background-color: gray;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 250px auto;
+    border: 1px solid black;
+    padding-left: 200px;
+    padding-right: 200px;
+      
+}
+
+:host :ng-deep .mat-form-field-infix  {
+    width: 300px;
+}

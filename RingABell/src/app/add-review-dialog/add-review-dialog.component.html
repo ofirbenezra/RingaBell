@@ -1,0 +1,61 @@
+<!-- <h1 mat-dialog-title>Hi</h1>
+<h1 mat-dialog-title>Please decsribe the charcatersitcs of the person you would like to report:</h1>
+
+<div mat-dialog-content>
+    <div mat-dialog-content>
+        <p>Personal information:</p>
+        <form>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="data.firstName" name="firstName" placeholder="Name" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>        
+        <br>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="data['lastName']" name="lastName" placeholder="Last Name" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="data.hebFirstName"  placeholder="hebrew Name" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="data.hebLastName" placeholder="hebrew last Name"[ngModelOptions]="{standalone: true}">
+        </mat-form-field>       
+        <mat-form-field appearance="fill">
+            <input type="number" matInput [(ngModel)]="data.age" placeholder="Age" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+    </form>
+    </div>
+    <p>He does one of these things:</p>
+    <mat-card class="result">
+        <mat-card-content>
+            <section class="example-section">
+                <mat-checkbox [(ngModel)]="data.characteristics.destroysProperty">Destroys
+                    your property or things that you care about.</mat-checkbox>
+            </section>
+            <section class="example-section">
+                <mat-checkbox [(ngModel)]="data.characteristics.criticizem">Criticize you for little things?
+                </mat-checkbox>
+            </section>
+            <section class="example-section">
+                <mat-checkbox [(ngModel)]="data.characteristics.forcesToHaveSex">Forces you to have sex against your
+                    will.</mat-checkbox>
+            </section>
+            <section class="example-section">
+                <mat-checkbox [(ngModel)]="data.characteristics.threatens">Threatens to hurt you or the children or
+                    pets, or does cause hurt (by hitting, punching, slapping, kicking, or biting).</mat-checkbox>
+            </section>
+            <section class="example-section">
+                <mat-checkbox [(ngModel)]="data.characteristics.accusesOfBeingUnfaithful">Constantly accuses you of
+                    being unfaithful.</mat-checkbox>
+            </section>
+            <section class="example-section">
+                <mat-checkbox [(ngModel)]="data.characteristics.shouts">Shouts/yells</mat-checkbox>
+            </section>
+        </mat-card-content>
+    </mat-card>
+    <mat-divider></mat-divider>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="data" (click)="onSave()" cdkFocusInitial>Ok</button>
+</div> -->
