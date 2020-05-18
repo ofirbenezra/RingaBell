@@ -1,19 +1,28 @@
-<div class="search-container">
-    <div>
-        <h1>Search for reviews:</h1>
+<div>
+  <div class="wrap">
+    <div class="search">
+      <input type="text" class="searchTerm" placeholder="Search for a name">
+      <button type="submit" class="searchButton">
+        <i class="pi pi-arrow-right"></i>
+      </button>
     </div>
-    <div>
-        <form [formGroup]="stateForm">
-        <!-- <mat-form-field>
-          <input type="text" matInput placeholder="Search for review" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
-            <mat-autocomplete #autoGroup="matAutocomplete">
-              <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
-                <mat-option *ngFor="let name of group.names" [value]="name">
-                  {{name}}
-                </mat-option>
-            </mat-optgroup>
-          </mat-autocomplete>
-        </mat-form-field> -->
-      </form>     
-    </div>       
+  </div>
+  <div class="search-results" *ngIf="true">
+    <div class="search-item">
+      <div>Name</div>
+      <div>Location</div>
+      <div>Physicals</div>
+      <div>#of reoprts</div>
+    </div>
+    <div class="search-item" *ngFor="let item of items; let i = index">
+      <div><strong>{{item.name}}</strong></div>
+      <div>{{item.location}}</div>
+      <div>
+        <div *ngIf="true"><strong>Eye color</strong></div>
+        <div *ngIf="true"><strong>Eye color</strong></div>
+        <div *ngIf="true"><strong>Eye color</strong></div>
+        {{item.location}}</div>
+      <div>{{item.location}}</div>      
+    </div>
+  </div>
 </div>
