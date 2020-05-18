@@ -1,0 +1,43 @@
+<div class="second-step">
+    <div class="header">
+        Location of the abuse or abuser:
+    </div>
+    <div class="ui-g-12">
+        <span class="ui-float-label">
+            <input id="float-input" type="text" size="24" pInputText>
+            <label for="float-input">Search Location</label>
+        </span>
+    </div>
+    <div class="header">What’s your relation to abuser</div>
+    <div class="checkbox-group">
+        <div class="group-label">Eye Color</div>
+        <div>
+            <p-checkbox name="group1" label="Blue" (onChange)="onRelationShipCheck()" inputId="ny">
+            </p-checkbox>
+        </div>
+        <div>
+            <p-checkbox name="group1" label="Brown" (onChange)="onRelationShipCheck()" inputId="ny">
+            </p-checkbox>
+        </div>
+        <div></div>
+        <div>
+            <p-checkbox name="group1" label="Green" (onChange)="onRelationShipCheck()" inputId="ny">
+            </p-checkbox>
+        </div>
+        <div>
+            <p-checkbox name="group1" label="Black" (onChange)="onRelationShipCheck()" inputId="ny">
+            </p-checkbox>
+        </div>
+        <div></div>
+        <div>
+            <p-checkbox name="group1" label="Not sure" (onChange)="onRelationShipCheck()" inputId="ny">
+            </p-checkbox>
+        </div>
+        <div>
+        </div>
+    </div>
+    <div class="header">Characteristics of the abuser</div>
+    <div class="checkbox-group">
+    </div>
+<p-button (onClick)="gotoPrevStep()"><i class="pi pi-arrow-left" style="padding-top: 8px;"></i></p-button>
+</div>

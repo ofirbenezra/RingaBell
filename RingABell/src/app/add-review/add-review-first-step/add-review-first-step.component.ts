@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Review } from 'src/app/models/review.model';
+import { Review, EyeColor } from 'src/app/models/review.model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -20,18 +20,37 @@ export class AddReviewFirstStepComponent implements OnInit {
       lastName: '',
       hebFirstName: '',
       hebLastName: '',
-      characteristics: {
+      behaviorChar: {
         shouts: false,
         accusesOfBeingUnfaithful: false,
         criticizem: false,
         destroysProperty: false,
         forcesToHaveSex: false,
         threatens: false
+      },
+      physicalChar: {
+
       }
     }
   }
 
   gotoNextStep() {
     this.router.navigate(['add-review2']);
+  }
+
+  onHeightCheck() {
+
+  }
+
+  onEyeColorCheck() {
+
+  }
+
+  onHairColorCheck() {
+
+  }
+
+  onPhysiqueCheck() {
+    
   }
 }

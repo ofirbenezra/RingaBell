@@ -4,9 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AddReviewDialogComponent } from './add-review-dialog/add-review-dialog.component';
 import { AddReviewFirstStepComponent } from './add-review/add-review-first-step/add-review-first-step.component';
-import { AddReviewSecondStepComponent } from './add-review-second-step/add-review-second-step.component';
+import { AddReviewSecondStepComponent } from './add-review/add-review-second-step/add-review-second-step.component';
 
 
 const routes: Routes = [

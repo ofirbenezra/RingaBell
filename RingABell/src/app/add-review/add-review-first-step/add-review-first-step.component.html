@@ -32,25 +32,25 @@
     <div class="checkbox-group">
         <div class="group-label">Eye Color</div>
         <div>
-            <p-checkbox name="group1" label="Blue" [(ngModel)]="data.characteristics.destroysProperty" inputId="ny">
+            <p-checkbox name="group1" label="Blue" (onChange)="onEyeColorCheck()"  inputId="ny">
             </p-checkbox>
         </div>
         <div>
-            <p-checkbox name="group1" label="Brown" [(ngModel)]="data.characteristics.criticizem" inputId="ny">
-            </p-checkbox>
-        </div>
-        <div></div>
-        <div>
-            <p-checkbox name="group1" label="Green" [(ngModel)]="data.characteristics.destroysProperty" inputId="ny">
-            </p-checkbox>
-        </div>
-        <div>
-            <p-checkbox name="group1" label="Black" [(ngModel)]="data.characteristics.criticizem" inputId="ny">
+            <p-checkbox name="group1" label="Brown" (onChange)="onEyeColorCheck()" inputId="ny">
             </p-checkbox>
         </div>
         <div></div>
         <div>
-            <p-checkbox name="group1" label="Not sure" [(ngModel)]="data.characteristics.destroysProperty" inputId="ny">
+            <p-checkbox name="group1" label="Green" (onChange)="onEyeColorCheck()"  inputId="ny">
+            </p-checkbox>
+        </div>
+        <div>
+            <p-checkbox name="group1" label="Black" (onChange)="onEyeColorCheck()"  inputId="ny">
+            </p-checkbox>
+        </div>
+        <div></div>
+        <div>
+            <p-checkbox name="group1" label="Not sure" (onChange)="onEyeColorCheck()"  inputId="ny">
             </p-checkbox>
         </div>
         <div>            
@@ -59,43 +59,73 @@
     <div class="checkbox-group">
         <div class="group-label">Hair Color</div>
         <div>
-            <p-checkbox name="group1" label="Blue" [(ngModel)]="data.characteristics.destroysProperty" inputId="ny">
+            <p-checkbox name="group2" label="Blond" (onChange)="onHairColorCheck()"  inputId="ny">
             </p-checkbox>
         </div>
         <div>
-            <p-checkbox name="group1" label="Brown" [(ngModel)]="data.characteristics.criticizem" inputId="ny">
-            </p-checkbox>
-        </div>
-        <div></div>
-        <div>
-            <p-checkbox name="group1" label="Green" [(ngModel)]="data.characteristics.destroysProperty" inputId="ny">
-            </p-checkbox>
-        </div>
-        <div>
-            <p-checkbox name="group1" label="Black" [(ngModel)]="data.characteristics.criticizem" inputId="ny">
+            <p-checkbox name="group2" label="Brown" (onChange)="onHairColorCheck()"  inputId="ny">
             </p-checkbox>
         </div>
         <div></div>
         <div>
-            <p-checkbox name="group1" label="Not sure" [(ngModel)]="data.characteristics.destroysProperty" inputId="ny">
+            <p-checkbox name="group2" label="Red" (onChange)="onHairColorCheck()" inputId="ny">
+            </p-checkbox>
+        </div>
+        <div>
+            <p-checkbox name="group2" label="Black" (onChange)="onHairColorCheck()"  inputId="ny">
+            </p-checkbox>
+        </div>
+        <div></div>
+        <div>
+            <p-checkbox name="group2" label="Not sure"(onChange)="onHairColorCheck()"  inputId="ny">
             </p-checkbox>
         </div>
         <div>            
         </div>
     </div>
-    <!-- <div class="ui-g-12">
-        <p-checkbox name="group1" label="Forces you to have sex against your will."
-            [(ngModel)]="data.characteristics.forcesToHaveSex" inputId="ny"></p-checkbox>
+    <div class="checkbox-group">
+        <div class="group-label">Height</div>
+        <div>
+            <p-checkbox name="group3" label="High" (onChange)="onHeightCheck()" inputId="ny">
+            </p-checkbox>
+        </div>
+        <div>
+            <p-checkbox name="group3" label="Short" (onChange)="onHeightCheck()" inputId="ny">
+            </p-checkbox>
+        </div>
+        <div></div>
+        <div>
+            <p-checkbox name="group3" label="Average" (onChange)="onHeightCheck()" inputId="ny">
+            </p-checkbox>
+        </div>        
+        <div>
+            <p-checkbox name="group3" label="Not sure" (onChange)="onHeightCheck()" inputId="ny">
+            </p-checkbox>
+        </div>
     </div>
-    <div class="ui-g-12">
-        <p-checkbox name="group1"
-            label="Threatens to hurt you or the children or pets, or does cause hurt (by hitting, punching, slapping, kicking, or biting)."
-            [(ngModel)]="data.characteristics.threatens" inputId="ny"></p-checkbox>
+    <div class="checkbox-group">
+        <div class="group-label">Physique</div>
+        <div>
+            <p-checkbox name="group4" label="Full" (onChange)="onPhysiqueCheck()" inputId="ny">
+            </p-checkbox>
+        </div>
+        <div>
+            <p-checkbox name="group4" label="Average" (onChange)="onPhysiqueCheck()" inputId="ny">
+            </p-checkbox>
+        </div>
+        <div></div>
+        <div>
+            <p-checkbox name="group4" label="Athlete" (onChange)="onPhysiqueCheck()" inputId="ny">
+            </p-checkbox>
+        </div>        
+        <div>
+            <p-checkbox name="group4" label="Not sure" (onChange)="onPhysiqueCheck()" inputId="ny">
+            </p-checkbox>
+        </div>
+        <div>            
+        </div>
     </div>
-    <div class="ui-g-12">
-        <p-checkbox name="group1" label="Constantly accuses you of being unfaithful."
-            [(ngModel)]="data.characteristics.accusesOfBeingUnfaithful" inputId="ny"></p-checkbox>
-    </div> -->
-    <!-- </div> -->
-    <p-button (onClick)="gotoNextStep()"><i class="pi pi-arrow-right" style="padding-top: 8px;"></i></p-button>
-</div>>
+    <div style="text-align: right;padding-top: 30px;">
+        <p-button (onClick)="gotoNextStep()"><i class="pi pi-arrow-right" style="padding-top: 8px;"></i></p-button>
+    </div>
+</div>

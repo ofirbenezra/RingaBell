@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Review } from '../models/review.model';
 // import { MatDialog } from '@angular/material/dialog';
-import { AddReviewDialogComponent } from '../add-review-dialog/add-review-dialog.component';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Router } from '@angular/router';
 

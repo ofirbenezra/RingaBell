@@ -1,10 +1,10 @@
 @import "../../styles/vars.scss";
 
-.first-step {
+.second-step {
     display: grid;
     grid-template-rows: 20px 200px 40px auto;
     margin: 0 auto;
-    width: 280px;
+    width: 375px;
 
     .header {
         color: #fff;
@@ -49,8 +49,4 @@
     .group-label {
         color: #fff;
     }  
-}   
-
-.checkbox-group:not(:first-child) {
-    margin-top: 30px;
-}
+}  

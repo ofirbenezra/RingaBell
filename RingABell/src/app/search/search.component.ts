@@ -3,7 +3,6 @@ import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
 // import { MatDialog } from '@angular/material/dialog';
-import { AddReviewDialogComponent } from '../add-review-dialog/add-review-dialog.component';
 import { Review } from '../models/review.model';
 
 export interface StateGroup {
