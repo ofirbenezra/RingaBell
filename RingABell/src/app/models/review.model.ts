@@ -28,6 +28,11 @@ export enum Physique {
     not_sure = "not_sure"
 }
 
+export enum Relation {
+    self = "self",
+    third_party = "third_party"
+}
+
 interface BehaviorCharacteristics {
     destroysProperty: boolean;
     criticizem: boolean;
@@ -51,6 +56,7 @@ export interface Review {
     hebFirstName: string;
     hebLastName: string;
     nickName: string;
+    relation?: Relation;
     behaviorChar: BehaviorCharacteristics;
     physicalChar: PhysicalCharacteristics;
 }

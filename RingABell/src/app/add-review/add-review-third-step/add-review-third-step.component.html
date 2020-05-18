@@ -2,40 +2,41 @@
     <div class="header">What’s your relation to abuser</div>
     <div style="padding-top: 20px;">
         <div>
-            <p-checkbox name="group1" label="I am the one beeing abused" (onChange)="onRelationShipCheck()"
-                inputId="ny">
+            <p-checkbox name="group1" label="I am the one beeing abused" value="self" (onChange)="onRelationShipCheck($event)"
+                [(ngModel)]="selectedRelation">
             </p-checkbox>
         </div>
         <div style="padding-top: 10px;">
-            <p-checkbox name="group1" label="I am a third party" (onChange)="onRelationShipCheck()" inputId="ny">
+            <p-checkbox name="group1" label="I am a third party" value="third_party" (onChange)="onRelationShipCheck($event)"
+                [(ngModel)]="selectedRelation">
             </p-checkbox>
         </div>
         <div class="header" style="padding-top: 20px;">Characteristics of the abuser</div>
         <div style="padding-top: 20px;">
             <div>
-                <p-checkbox name="group1" label="Destroys your property or things you care about"
-                    (onChange)="onRelationShipCheck()" inputId="ny">
+                <p-checkbox name="group2" label="Destroys your property or things you care about"
+                    [(ngModel)]="data.behaviorChar.destroysProperty"  [binary]="true">
                 </p-checkbox>
             </div>
             <div style="padding-top: 10px;">
-                <p-checkbox name="group1" label="Criticizes you for little things" (onChange)="onRelationShipCheck()"
-                    inputId="ny">
+                <p-checkbox name="group2" label="Criticizes you for little things"
+                    [(ngModel)]="data.behaviorChar.criticizem" [binary]="true">
                 </p-checkbox>
             </div>
             <div style="padding-top: 10px;">
-                <p-checkbox name="group1" label="Forces you to have sex against your will"
-                    (onChange)="onRelationShipCheck()" inputId="ny">
+                <p-checkbox name="group2" label="Forces you to have sex against your will"
+                    [(ngModel)]="data.behaviorChar.forcesToHaveSex"  [binary]="true">
                 </p-checkbox>
             </div>
             <div style="padding-top: 10px;">
-                <p-checkbox name="group1" label="Constantly accuses you of being unfaithful"
-                    (onChange)="onRelationShipCheck()" inputId="ny">
+                <p-checkbox name="group2" label="Constantly accuses you of being unfaithful"
+                    [(ngModel)]="data.behaviorChar.accusesOfBeingUnfaithful"  [binary]="true">
                 </p-checkbox>
             </div>
             <div style="padding-top: 10px;">
-                <p-checkbox name="group1"
+                <p-checkbox name="group2"
                     label="Threatens to hurt you or the children or pets, or does cause hurt (by hitting, punching, slapping, kicking, or biting)"
-                    (onChange)="onRelationShipCheck()" inputId="ny">
+                    [(ngModel)]="data.behaviorChar.threatens" [binary]="true">
                 </p-checkbox>
             </div>
         </div>
@@ -43,6 +44,6 @@
     <div style="padding-top: 30px;display: flex;">
         <p-button (onClick)="gotoPrevStep()"><i class="pi pi-arrow-left" style="padding-top: 8px;"></i></p-button>
         <div style=" flex: 1;"></div>
-        <p-button (onClick)="sendReport()" label="Send Report" styleClass="send-report-btn"></p-button>       
+        <p-button (onClick)="sendReport()" label="Send Report" styleClass="send-report-btn"></p-button>
     </div>
 </div>

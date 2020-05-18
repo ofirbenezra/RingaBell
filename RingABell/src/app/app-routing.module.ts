@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AddReviewFirstStepComponent } from './add-review/add-review-first-step/add-review-first-step.component';
 import { AddReviewSecondStepComponent } from './add-review/add-review-second-step/add-review-second-step.component';
 import { AddReviewThirdStepComponent } from './add-review/add-review-third-step/add-review-third-step.component';
+import { ThankYouComponent } from './add-review/thank-you/thank-you.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
     path: 'add-review3',
     component: AddReviewThirdStepComponent
   },
+  {
+    path: 'thank-you',
+    component: ThankYouComponent
+  },  
   {
     path: 'login',
     component: LoginComponent

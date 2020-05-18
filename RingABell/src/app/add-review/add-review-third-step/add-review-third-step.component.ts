@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Review } from 'src/app/models/review.model';
+import { Review, Relation } from 'src/app/models/review.model';
 import { ReviewService } from 'src/app/services/review.service';
 
 @Component({
@@ -10,17 +10,18 @@ import { ReviewService } from 'src/app/services/review.service';
 })
 export class AddReviewThirdStepComponent implements OnInit {
   data: Review;
+  selectedRelation: string;
 
-  constructor(private router: Router, private reviewService: ReviewService) { 
+  constructor(private router: Router, private reviewService: ReviewService) {
     this.data = this.reviewService.getReviewData();
   }
 
   ngOnInit(): void {
-    
+
   }
 
-  onRelationShipCheck() {
-
+  onRelationShipCheck(event: any) {
+    this.data.relation = this.selectedRelation[0] as Relation;
   }
 
   gotoPrevStep() {
@@ -28,7 +29,12 @@ export class AddReviewThirdStepComponent implements OnInit {
   }
 
   sendReport() {
-    alert("Send report");
+    this.reviewService.addReview(this.data).then((res) => {
+      this.router.navigate(['thank-you']);
+    }).catch(function (error) {
+      alert('Error');
+      
+    });
   }
 
 }
