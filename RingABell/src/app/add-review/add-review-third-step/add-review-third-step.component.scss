@@ -1,10 +1,9 @@
 @import "../../styles/vars.scss";
-
-.second-step {
+.third-step {
     display: grid;
-    // grid-template-rows: 20px 120px 120px 120ox 40px auto;
+    // grid-template-rows: 20px 270px 40px auto;
     margin: 0 auto;
-    width: 280px;
+    width: 450px;
 
     .header {
         color: #fff;
@@ -33,12 +32,16 @@
 
 ::ng-deep p-button {
     .ui-button {
-        // width: 32px;
+        width: 32px;
         height: 32px;
         background: #58bbc1;
         border-radius: 4px;
     }
+    .ui-button.send-report-btn {
+        width: 120px;
+    }
 }
+
 
 .checkbox-group {
     display: grid;
@@ -49,7 +52,7 @@
     .group-label {
         color: #fff;
     }  
-} 
+}
 
 .checkbox-group:not(:first-child) {
     margin-top: 30px;

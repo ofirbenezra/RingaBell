@@ -22,6 +22,7 @@ import { SearchComponent } from './search/search.component';
 import { HomeComponent } from './home/home.component';
 import { AddReviewFirstStepComponent } from './add-review/add-review-first-step/add-review-first-step.component';
 import { AddReviewSecondStepComponent } from './add-review/add-review-second-step/add-review-second-step.component';
+import { AddReviewThirdStepComponent } from './add-review/add-review-third-step/add-review-third-step.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { AddReviewSecondStepComponent } from './add-review/add-review-second-ste
     SearchComponent,
     HomeComponent,
     AddReviewFirstStepComponent,
-    AddReviewSecondStepComponent
+    AddReviewSecondStepComponent,
+    AddReviewThirdStepComponent
   ],
   imports: [
     BrowserModule,

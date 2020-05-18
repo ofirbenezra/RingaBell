@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AddReviewFirstStepComponent } from './add-review/add-review-first-step/add-review-first-step.component';
 import { AddReviewSecondStepComponent } from './add-review/add-review-second-step/add-review-second-step.component';
+import { AddReviewThirdStepComponent } from './add-review/add-review-third-step/add-review-third-step.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'add-review2',
     component: AddReviewSecondStepComponent
+  },
+  {
+    path: 'add-review3',
+    component: AddReviewThirdStepComponent
   },
   {
     path: 'login',

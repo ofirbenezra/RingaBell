@@ -1,31 +1,31 @@
 export enum EyeColor {
-    blue,
-    brown,
-    green,
-    black,
-    not_sure
+    blue = "blue",
+    brown = "brown",
+    green = "green",
+    black = "black",
+    not_sure = "not_sure"
 }
 
 export enum HairColor {
-    blond,
-    brown,
-    redHead,
-    black,
-    not_sure
+    blond = "blond",
+    brown = "brown",
+    redHead = "redHead",
+    black = "black",
+    not_sure = "not_sure"
 }
 
 export enum Height {
-    high,
-    short,
-    average,
-    not_sure
+    high = "high",
+    short = "short",
+    average = "average",
+    not_sure = "not_sure"
 }
 
 export enum Physique {
-    full,
-    average,
-    Athlete,
-    not_sure
+    full = "full",
+    average = "average",
+    athlete = "athlete",
+    not_sure = "not_sure"
 }
 
 interface BehaviorCharacteristics {
@@ -50,6 +50,7 @@ export interface Review {
     age: number;
     hebFirstName: string;
     hebLastName: string;
+    nickName: string;
     behaviorChar: BehaviorCharacteristics;
     physicalChar: PhysicalCharacteristics;
 }

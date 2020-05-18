@@ -2,7 +2,7 @@
     <div class="header">
         Personal information of the abuser
     </div>
-    <div>
+    <div class="personal-info">
         <div class="ui-g-12">
             <span class="ui-float-label">
                 <input id="float-input" type="text" size="24" pInputText>
@@ -12,119 +12,28 @@
         <div class="ui-g-12">
             <span class="ui-float-label">
                 <input id="float-input" type="text" size="24" pInputText>
-                <label for="float-input">First Name</label>
+                <label for="float-input">Last Name</label>
             </span>
         </div>
         <div class="ui-g-12">
             <span class="ui-float-label">
                 <input id="float-input" type="text" size="24" pInputText>
-                <label for="float-input">First Name</label>
+                <label for="float-input">Nickname</label>
             </span>
         </div>
         <div class="ui-g-12">
             <span class="ui-float-label">
                 <input id="float-input" type="text" size="24" pInputText>
-                <label for="float-input">First Name</label>
+                <label for="float-input">Hebrew first Name</label>
             </span>
         </div>
-    </div>
-    <div class="header">Physical characteristics of the abuser</div>
-    <div class="checkbox-group">
-        <div class="group-label">Eye Color</div>
-        <div>
-            <p-checkbox name="group1" label="Blue" (onChange)="onEyeColorCheck()"  inputId="ny">
-            </p-checkbox>
+        <div class="ui-g-12">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="24" pInputText>
+                <label for="float-input">Hebrew last Name</label>
+            </span>
         </div>
-        <div>
-            <p-checkbox name="group1" label="Brown" (onChange)="onEyeColorCheck()" inputId="ny">
-            </p-checkbox>
-        </div>
-        <div></div>
-        <div>
-            <p-checkbox name="group1" label="Green" (onChange)="onEyeColorCheck()"  inputId="ny">
-            </p-checkbox>
-        </div>
-        <div>
-            <p-checkbox name="group1" label="Black" (onChange)="onEyeColorCheck()"  inputId="ny">
-            </p-checkbox>
-        </div>
-        <div></div>
-        <div>
-            <p-checkbox name="group1" label="Not sure" (onChange)="onEyeColorCheck()"  inputId="ny">
-            </p-checkbox>
-        </div>
-        <div>            
-        </div>
-    </div>
-    <div class="checkbox-group">
-        <div class="group-label">Hair Color</div>
-        <div>
-            <p-checkbox name="group2" label="Blond" (onChange)="onHairColorCheck()"  inputId="ny">
-            </p-checkbox>
-        </div>
-        <div>
-            <p-checkbox name="group2" label="Brown" (onChange)="onHairColorCheck()"  inputId="ny">
-            </p-checkbox>
-        </div>
-        <div></div>
-        <div>
-            <p-checkbox name="group2" label="Red" (onChange)="onHairColorCheck()" inputId="ny">
-            </p-checkbox>
-        </div>
-        <div>
-            <p-checkbox name="group2" label="Black" (onChange)="onHairColorCheck()"  inputId="ny">
-            </p-checkbox>
-        </div>
-        <div></div>
-        <div>
-            <p-checkbox name="group2" label="Not sure"(onChange)="onHairColorCheck()"  inputId="ny">
-            </p-checkbox>
-        </div>
-        <div>            
-        </div>
-    </div>
-    <div class="checkbox-group">
-        <div class="group-label">Height</div>
-        <div>
-            <p-checkbox name="group3" label="High" (onChange)="onHeightCheck()" inputId="ny">
-            </p-checkbox>
-        </div>
-        <div>
-            <p-checkbox name="group3" label="Short" (onChange)="onHeightCheck()" inputId="ny">
-            </p-checkbox>
-        </div>
-        <div></div>
-        <div>
-            <p-checkbox name="group3" label="Average" (onChange)="onHeightCheck()" inputId="ny">
-            </p-checkbox>
-        </div>        
-        <div>
-            <p-checkbox name="group3" label="Not sure" (onChange)="onHeightCheck()" inputId="ny">
-            </p-checkbox>
-        </div>
-    </div>
-    <div class="checkbox-group">
-        <div class="group-label">Physique</div>
-        <div>
-            <p-checkbox name="group4" label="Full" (onChange)="onPhysiqueCheck()" inputId="ny">
-            </p-checkbox>
-        </div>
-        <div>
-            <p-checkbox name="group4" label="Average" (onChange)="onPhysiqueCheck()" inputId="ny">
-            </p-checkbox>
-        </div>
-        <div></div>
-        <div>
-            <p-checkbox name="group4" label="Athlete" (onChange)="onPhysiqueCheck()" inputId="ny">
-            </p-checkbox>
-        </div>        
-        <div>
-            <p-checkbox name="group4" label="Not sure" (onChange)="onPhysiqueCheck()" inputId="ny">
-            </p-checkbox>
-        </div>
-        <div>            
-        </div>
-    </div>
+    </div>    
     <div style="text-align: right;padding-top: 30px;">
         <p-button (onClick)="gotoNextStep()"><i class="pi pi-arrow-right" style="padding-top: 8px;"></i></p-button>
     </div>

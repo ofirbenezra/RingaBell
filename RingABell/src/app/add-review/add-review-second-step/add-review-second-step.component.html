@@ -1,5 +1,5 @@
 <div class="second-step">
-    <div class="header">
+    <!-- <div class="header">
         Location of the abuse or abuser:
     </div>
     <div class="ui-g-12">
@@ -7,37 +7,107 @@
             <input id="float-input" type="text" size="24" pInputText>
             <label for="float-input">Search Location</label>
         </span>
-    </div>
-    <div class="header">What’s your relation to abuser</div>
+    </div> -->
+    <div class="header">Physical characteristics of the abuser</div>
     <div class="checkbox-group">
         <div class="group-label">Eye Color</div>
         <div>
-            <p-checkbox name="group1" label="Blue" (onChange)="onRelationShipCheck()" inputId="ny">
+            <p-checkbox name="group1" label="Blue" value="blue" (onChange)="onEyeColorCheck($event)"  [(ngModel)]="selectedEyeColor">
             </p-checkbox>
         </div>
         <div>
-            <p-checkbox name="group1" label="Brown" (onChange)="onRelationShipCheck()" inputId="ny">
-            </p-checkbox>
-        </div>
-        <div></div>
-        <div>
-            <p-checkbox name="group1" label="Green" (onChange)="onRelationShipCheck()" inputId="ny">
-            </p-checkbox>
-        </div>
-        <div>
-            <p-checkbox name="group1" label="Black" (onChange)="onRelationShipCheck()" inputId="ny">
+            <p-checkbox name="group1" label="Brown" value="brown" (onChange)="onEyeColorCheck($event)" [(ngModel)]="selectedEyeColor">
             </p-checkbox>
         </div>
         <div></div>
         <div>
-            <p-checkbox name="group1" label="Not sure" (onChange)="onRelationShipCheck()" inputId="ny">
+            <p-checkbox name="group1" label="Green" value="green" (onChange)="onEyeColorCheck($event)"  [(ngModel)]="selectedEyeColor">
             </p-checkbox>
         </div>
         <div>
+            <p-checkbox name="group1" label="Black"  value="black" (onChange)="onEyeColorCheck($event)"  [(ngModel)]="selectedEyeColor">
+            </p-checkbox>
+        </div>
+        <div></div>
+        <div>
+            <p-checkbox name="group1" label="Not sure" value="not-sure" (onChange)="onEyeColorCheck($event)"  [(ngModel)]="selectedEyeColor">
+            </p-checkbox>
+        </div>
+        <div>            
         </div>
     </div>
-    <div class="header">Characteristics of the abuser</div>
     <div class="checkbox-group">
+        <div class="group-label">Hair Color</div>
+        <div>
+            <p-checkbox name="group2" label="Blond" value="blond" (onChange)="onHairColorCheck($event)"  [(ngModel)]="selectedHairColor">
+            </p-checkbox>
+        </div>
+        <div>
+            <p-checkbox name="group2" label="Brown" value="brown" (onChange)="onHairColorCheck($event)"  [(ngModel)]="selectedHairColor">
+            </p-checkbox>
+        </div>
+        <div></div>
+        <div>
+            <p-checkbox name="group2" label="RedHead" value="redHead" (onChange)="onHairColorCheck($event)" [(ngModel)]="selectedHairColor">
+            </p-checkbox>
+        </div>
+        <div>
+            <p-checkbox name="group2" label="Black" value="black" (onChange)="onHairColorCheck($event)"  [(ngModel)]="selectedHairColor">
+            </p-checkbox>
+        </div>
+        <div></div>
+        <div>
+            <p-checkbox name="group2" label="Not sure" value="not-sure" (onChange)="onHairColorCheck($event)"  [(ngModel)]="selectedHairColor">
+            </p-checkbox>
+        </div>
+        <div>            
+        </div>
     </div>
-<p-button (onClick)="gotoPrevStep()"><i class="pi pi-arrow-left" style="padding-top: 8px;"></i></p-button>
+    <div class="checkbox-group">
+        <div class="group-label">Height</div>
+        <div>
+            <p-checkbox name="group3" label="High" value="high" (onChange)="onHeightCheck($event)" [(ngModel)]="selectedHeight">
+            </p-checkbox>
+        </div>
+        <div>
+            <p-checkbox name="group3" label="Short" value="short" (onChange)="onHeightCheck($event)" [(ngModel)]="selectedHeight">
+            </p-checkbox>
+        </div>
+        <div></div>
+        <div>
+            <p-checkbox name="group3" label="Average" value="average" (onChange)="onHeightCheck($event)" [(ngModel)]="selectedHeight">
+            </p-checkbox>
+        </div>        
+        <div>
+            <p-checkbox name="group3" label="Not sure" value="not-sure" (onChange)="onHeightCheck($event)" [(ngModel)]="selectedHeight">
+            </p-checkbox>
+        </div>
+    </div>
+    <div class="checkbox-group">
+        <div class="group-label">Physique</div>
+        <div>
+            <p-checkbox name="group4" label="Full"  value="full" (onChange)="onPhysiqueCheck($event)" [(ngModel)]="selectedPhysique">
+            </p-checkbox>
+        </div>
+        <div>
+            <p-checkbox name="group4" label="Average" value="average" (onChange)="onPhysiqueCheck($event)" [(ngModel)]="selectedPhysique">
+            </p-checkbox>
+        </div>
+        <div></div>
+        <div>
+            <p-checkbox name="group4" label="Athlete" value="athlete" (onChange)="onPhysiqueCheck($event)" [(ngModel)]="selectedPhysique">
+            </p-checkbox>
+        </div>        
+        <div>
+            <p-checkbox name="group4" label="Not sure" value="not-sure" (onChange)="onPhysiqueCheck($event)" [(ngModel)]="selectedPhysique">
+            </p-checkbox>
+        </div>
+        <div>            
+        </div>
+    </div>
+    <div style="padding-top: 30px;display: flex;">
+        <p-button (onClick)="gotoPrevStep()"><i class="pi pi-arrow-left" style="padding-top: 8px;"></i></p-button>
+        <div style=" flex: 1;"></div>
+        <p-button (onClick)="gotoNextStep()"><i class="pi pi-arrow-right" style="padding-top: 8px;"></i></p-button>       
+    </div>
 </div>

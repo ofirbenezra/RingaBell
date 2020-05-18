@@ -2,7 +2,7 @@
 
 .first-step {
     display: grid;
-    grid-template-rows: 20px 200px 40px auto;
+    grid-template-rows: 20px 280px 40px auto;
     margin: 0 auto;
     width: 280px;
 
@@ -14,20 +14,13 @@
         font-size: 16px;
         line-height: 20px;
     }
-}
 
-::ng-deep p-checkbox {
-    .ui-chkbox .ui-chkbox-box {
-        width: 22px;
-        height: 22px;
-        border: 1px solid #58bbc1;
-        background-color: $APP_BACKGROUND;
-        &:not(.ui-state-disabled):hover {
-            border: 1px solid #58bbc1;
-        }
-    }
-    .ui-chkbox-label {
-        color: #fff;
+    .personal-info {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: grid;
+        grid-template-rows: repeat(5);
+        grid-row-gap: 15px;
     }
 }
 
@@ -38,19 +31,4 @@
         background: #58bbc1;
         border-radius: 4px;
     }
-}
-
-.checkbox-group {
-    display: grid;
-    grid-template-columns: 95px 90px 90px;       
-    grid-column-gap: 5px;
-    grid-row-gap: 10px;
-
-    .group-label {
-        color: #fff;
-    }  
-}   
-
-.checkbox-group:not(:first-child) {
-    margin-top: 30px;
 }

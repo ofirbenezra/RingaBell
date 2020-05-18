@@ -7,9 +7,34 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class ReviewService {
 
-  constructor(private firestore: AngularFirestore) { }
+  private data: Review;
+
+  constructor(private firestore: AngularFirestore) {
+    this.data = {
+      age: 25,
+      firstName: '',
+      lastName: '',
+      hebFirstName: '',
+      hebLastName: '',
+      nickName: '',
+      behaviorChar: {
+        shouts: false,
+        accusesOfBeingUnfaithful: false,
+        criticizem: false,
+        destroysProperty: false,
+        forcesToHaveSex: false,
+        threatens: false
+      },
+      physicalChar: {
+      }
+    }
+  }
 
   public addReview(review: Review) {
     return this.firestore.collection('reviews').add(review);
+  }
+
+  public getReviewData(): Review {
+    return this.data;
   }
 }

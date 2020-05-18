@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Review, EyeColor } from 'src/app/models/review.model';
+import { Review, EyeColor, HairColor, Physique, Height } from 'src/app/models/review.model';
 import { Router } from '@angular/router';
+import { ReviewService } from 'src/app/services/review.service';
 
 @Component({
   selector: 'app-add-review-first-step',
@@ -8,49 +9,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-review-first-step.component.scss']
 })
 export class AddReviewFirstStepComponent implements OnInit {
-  
+
   data: Review;
-  
-  constructor(private router: Router) { }
 
-  ngOnInit(): void {
-    this.data = {
-      age: 25,
-      firstName: '',
-      lastName: '',
-      hebFirstName: '',
-      hebLastName: '',
-      behaviorChar: {
-        shouts: false,
-        accusesOfBeingUnfaithful: false,
-        criticizem: false,
-        destroysProperty: false,
-        forcesToHaveSex: false,
-        threatens: false
-      },
-      physicalChar: {
+  constructor(private router: Router, private reviewService: ReviewService) { }
 
-      }
-    }
+  ngOnInit() {
+    this.data = this.reviewService.getReviewData();
   }
 
   gotoNextStep() {
     this.router.navigate(['add-review2']);
-  }
-
-  onHeightCheck() {
-
-  }
-
-  onEyeColorCheck() {
-
-  }
-
-  onHairColorCheck() {
-
-  }
-
-  onPhysiqueCheck() {
-    
   }
 }
