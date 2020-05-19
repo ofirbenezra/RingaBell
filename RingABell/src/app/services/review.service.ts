@@ -17,6 +17,7 @@ export class ReviewService {
       hebFirstName: '',
       hebLastName: '',
       nickName: '',
+      numOfReports: 0,
       behaviorChar: {
         shouts: false,
         accusesOfBeingUnfaithful: false,
@@ -36,5 +37,9 @@ export class ReviewService {
 
   public getReviewData(): Review {
     return this.data;
+  }
+
+  public getReviews() {
+    return this.firestore.collection('reviews').snapshotChanges();
   }
 }

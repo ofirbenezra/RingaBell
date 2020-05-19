@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
 // import { MatDialog } from '@angular/material/dialog';
 import { Review } from '../models/review.model';
+import { ReviewService } from '../services/review.service';
 
 export interface StateGroup {
   letter: string;
@@ -24,15 +25,17 @@ export const _filter = (opt: string[], value: string): string[] => {
 export class SearchComponent implements OnInit {
 
   stateGroupOptions: Observable<StateGroup[]>;
-  items = [];
-  constructor(private _formBuilder: FormBuilder) { 
-    this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
-    this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
-    this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
-    this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
-    this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
-    this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
-    this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
+  reviews = [];
+  showData = false;
+
+  constructor(private _formBuilder: FormBuilder, private reviewService: ReviewService) { 
+    // this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
+    // this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
+    // this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
+    // this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
+    // this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
+    // this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
+    // this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
   }
 
   stateForm: FormGroup = this._formBuilder.group({
@@ -42,7 +45,22 @@ export class SearchComponent implements OnInit {
   
 
 
-  ngOnInit() {
-    
+  ngOnInit() {    
+  }
+
+  onSearchClick() {
+    this.getResults();
+  }
+
+  getResults() {
+    this.reviewService.getReviews().subscribe(data => {
+      this.showData = true;
+      this.reviews = data.map(e => {
+        return {
+          id: e.payload.doc.id,
+          ...e.payload.doc.data() as Review
+        } as Review;
+      }) 
+    });
   }
 }

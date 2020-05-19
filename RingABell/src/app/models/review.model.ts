@@ -59,4 +59,5 @@ export interface Review {
     relation?: Relation;
     behaviorChar: BehaviorCharacteristics;
     physicalChar: PhysicalCharacteristics;
+    numOfReports: number;
 }

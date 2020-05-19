@@ -2,27 +2,43 @@
   <div class="wrap">
     <div class="search">
       <input type="text" class="searchTerm" placeholder="Search for a name">
-      <button type="submit" class="searchButton">
+      <button type="submit" class="searchButton" (click)="onSearchClick()">
         <i class="pi pi-arrow-right"></i>
       </button>
     </div>
   </div>
-  <div class="search-results" *ngIf="true">
+  <div class="search-results" *ngIf="showData">
     <div class="search-item">
       <div>Name</div>
       <div>Location</div>
       <div>Physicals</div>
       <div>#of reoprts</div>
     </div>
-    <div class="search-item" *ngFor="let item of items; let i = index">
-      <div><strong>{{item.name}}</strong></div>
+    <div class="search-item" *ngFor="let item of reviews; let i = index">
+      <div class="bold-text">
+        <div>{{item.firstName}}</div>
+        <div>{{item.lastName}}</div>
+      </div>
       <div>{{item.location}}</div>
       <div>
-        <div *ngIf="true"><strong>Eye color</strong></div>
-        <div *ngIf="true"><strong>Eye color</strong></div>
-        <div *ngIf="true"><strong>Eye color</strong></div>
-        {{item.location}}</div>
-      <div>{{item.location}}</div>      
+        <div *ngIf="item.physicalChar.eyeColor">
+          <div class="bold-text">Eye color</div>
+          <div class="item-val">{{item.physicalChar.eyeColor}}</div>
+        </div>
+        <div *ngIf="item.physicalChar.hairColor" class="padd-top">
+          <div class="bold-text">Hair color</div>
+          <div class="item-val">{{item.physicalChar.hairColor}}</div>
+        </div>
+        <div *ngIf="item.physicalChar.height" class="padd-top">
+          <div class="bold-text">Height</div>
+          <div class="item-val">{{item.physicalChar.height}}</div>
+        </div>
+        <div *ngIf="item.physicalChar.physique" class="padd-top">
+          <div class="bold-text">Physique</div>
+          <div class="item-val">{{item.physicalChar.physique}}</div>
+        </div>
+      </div>
+      <div>{{item.location}}</div>
     </div>
   </div>
 </div>
