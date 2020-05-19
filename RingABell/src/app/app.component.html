@@ -40,6 +40,7 @@
   .toolbar .title {
     padding-left: 97px;
     padding-top: 40px;
+    cursor: pointer;
   }
 
   .toolbar img {
@@ -67,7 +68,7 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <!-- <div class="spacer"></div> -->
-  <div class="title">Ring a bell.</div>
+  <div class="title" (click)="goToHomePage()">Ring a bell.</div>
 </div>
 <div class="content" role="main"></div>
 

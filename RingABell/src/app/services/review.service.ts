@@ -10,6 +10,10 @@ export class ReviewService {
   private data: Review;
 
   constructor(private firestore: AngularFirestore) {
+    this.initData();
+  }
+
+  public initData() {
     this.data = {
       age: 25,
       firstName: '',
@@ -17,7 +21,8 @@ export class ReviewService {
       hebFirstName: '',
       hebLastName: '',
       nickName: '',
-      numOfReports: 0,
+      thirdPartyReports: 0,
+      ownReports: 0,
       behaviorChar: {
         shouts: false,
         accusesOfBeingUnfaithful: false,

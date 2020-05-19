@@ -15,7 +15,8 @@ export class AddReviewFirstStepComponent implements OnInit {
   constructor(private router: Router, private reviewService: ReviewService) { }
 
   ngOnInit() {
-    this.data = this.reviewService.getReviewData();
+    this.reviewService.initData();
+    this.data = this.reviewService.getReviewData();    
   }
 
   gotoNextStep() {
