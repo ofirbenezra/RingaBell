@@ -39,7 +39,7 @@ export class ReviewService {
     return this.data;
   }
 
-  public getReviews() {
-    return this.firestore.collection('reviews').snapshotChanges();
+  public getReviews(searchTerm: string) {
+    return this.firestore.collection('reviews', ref => ref.where('firstName', '==', searchTerm)).valueChanges();
   }
 }

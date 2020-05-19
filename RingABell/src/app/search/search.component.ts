@@ -27,8 +27,9 @@ export class SearchComponent implements OnInit {
   stateGroupOptions: Observable<StateGroup[]>;
   reviews = [];
   showData = false;
+  searchTerm: string;
 
-  constructor(private _formBuilder: FormBuilder, private reviewService: ReviewService) { 
+  constructor(private _formBuilder: FormBuilder, private reviewService: ReviewService) {
     // this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
     // this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
     // this.items.push({name:'ofir', location: 'Tel Aviv Yaffo'});
@@ -42,25 +43,26 @@ export class SearchComponent implements OnInit {
     stateGroup: '',
   });
 
-  
 
 
-  ngOnInit() {    
+
+  ngOnInit() {
   }
 
-  onSearchClick() {
+  onSearchClick() {   
     this.getResults();
   }
 
   getResults() {
-    this.reviewService.getReviews().subscribe(data => {
+    this.reviewService.getReviews(this.searchTerm).subscribe(data => {
       this.showData = true;
-      this.reviews = data.map(e => {
-        return {
-          id: e.payload.doc.id,
-          ...e.payload.doc.data() as Review
-        } as Review;
-      }) 
+      // this.reviews = data.map(e => {
+      //   return {
+      //     id: e.payload.doc.id,
+      //     ...e.payload.doc.data() as Review
+      //   } as Review;
+      // }) 
+      this.reviews = data.map(x => x as Review);
     });
   }
 }

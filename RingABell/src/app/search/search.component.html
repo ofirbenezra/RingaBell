@@ -1,7 +1,7 @@
 <div>
   <div class="wrap">
     <div class="search">
-      <input type="text" class="searchTerm" placeholder="Search for a name">
+      <input type="text" class="searchTerm" placeholder="Search for a name" [(ngModel)]="searchTerm">
       <button type="submit" class="searchButton" (click)="onSearchClick()">
         <i class="pi pi-arrow-right"></i>
       </button>
