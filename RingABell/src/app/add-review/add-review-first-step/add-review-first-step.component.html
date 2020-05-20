@@ -4,36 +4,21 @@
     </div>
     <div class="personal-info">
         <div class="ui-g-12">
-            <span class="ui-float-label">
-                <input id="float-input" type="text" size="24" pInputText [(ngModel)]="data.firstName">
-                <label for="float-input">First Name</label>
-            </span>
+            <input type="text" pInputText [(ngModel)]="data.firstName" placeholder="First name">
         </div>
         <div class="ui-g-12">
-            <span class="ui-float-label">
-                <input id="float-input" type="text" size="24" pInputText [(ngModel)]="data.lastName">
-                <label for="float-input">Last Name</label>
-            </span>
+            <input type="text" pInputText [(ngModel)]="data.lastName" placeholder="Last name">
         </div>
         <div class="ui-g-12">
-            <span class="ui-float-label">
-                <input id="float-input" type="text" size="24" pInputText [(ngModel)]="data.nickName">
-                <label for="float-input">Nickname</label>
-            </span>
+            <input type="text" pInputText [(ngModel)]="data.nickName" placeholder="Nick name">
         </div>
         <div class="ui-g-12">
-            <span class="ui-float-label">
-                <input id="float-input" type="text" size="24" pInputText [(ngModel)]="data.hebFirstName">
-                <label for="float-input">Hebrew first Name</label>
-            </span>
+            <input type="text" pInputText [(ngModel)]="data.hebFirstName" placeholder="Hebrew first name">
         </div>
         <div class="ui-g-12">
-            <span class="ui-float-label">
-                <input id="float-input" type="text" size="24" pInputText [(ngModel)]="data.hebLastName">
-                <label for="float-input">Hebrew last Name</label>
-            </span>
+            <input type="text" pInputText [(ngModel)]="data.hebLastName" placeholder="Hebrew last name">
         </div>
-    </div>    
+    </div>
     <div style="text-align: right;padding-top: 30px;">
         <p-button (onClick)="gotoNextStep()"><i class="pi pi-arrow-right" style="padding-top: 8px;"></i></p-button>
     </div>
